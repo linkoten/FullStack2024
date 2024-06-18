@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import SessionWrapper from "@/lib/SessionWrapper";
+import {ThemeProvider} from "@/app/components/theme-provider"
+import Nav from "./components/Nav"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,9 +17,23 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} theme-violet`}>
+        <SessionWrapper>
+          <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <Nav/>
+              {children}
+            </ThemeProvider>
+        </SessionWrapper>
+      </body>
     </html>
   );
 }
