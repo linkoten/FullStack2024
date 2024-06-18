@@ -58,7 +58,7 @@ export default async function PaiementPage() {
           <div className="mt-4 text-6xl font-black ">
             <span>19,99€</span> <span className="text-sm text-muted-foreground">/ par mois</span>
           </div>
-          <p className="mt-4 text-muted-foreground">Découvrez les Plaisirs Exclusifs du Développement Web Premium avec notre pass Premium et Profitez d'une experience unique !</p>
+          <p className="mt-4 text-muted-foreground">Découvrez les Plaisirs Exclusifs du Développement Web Premium avec notre pass Premium et Profitez d&apos;une experience unique !</p>
           <div className="flex-1 flex flex-col justify-between px6 py-6 bg-secondary rounded-lg m-1 space-t-6 p-3 mt-4">
             <ul className="space-y-3">
               {itemsPremium.map((item, index)=> (
