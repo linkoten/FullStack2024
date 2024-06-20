@@ -1,5 +1,5 @@
 datasource db {
-  provider = "cockroachdb"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
  
@@ -22,7 +22,7 @@ model User {
 }
 
 model Post {
-  id            Int      @id @default(sequence())
+  id            Int      @id @default(autoincrement())
   title         String
   code          String   
   language      String
