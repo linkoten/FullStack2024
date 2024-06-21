@@ -71,7 +71,7 @@ const PasswordGeneratorForm: React.FC = () => {
         <Input
           type="range"
           min="1"
-          max="30"
+          max="32"
           value={length}
           onChange={(e) => setLength(parseInt(e.target.value))}
           className="w-full"
