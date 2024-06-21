@@ -27,7 +27,6 @@ export default function Home() {
         <Cursor />
       </span>
       </h1>
-      <p className="my-2">Rejoignez une aventure de codeur avec <span className="font-bold">La Minute De Code</span></p>
     
       <ButtonsProviders />
      

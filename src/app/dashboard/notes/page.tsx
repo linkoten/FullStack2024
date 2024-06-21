@@ -21,7 +21,7 @@ export default async function DashboardPage() {
           <div className="grid gap-1">
             <h2 className="text-3xl uppercase font-black">Notes</h2>
             <p className="text-lg text-muted-foreground">Ne perdez pas vos idées et créer une note</p>
-            <div className="w-12 h-[1px] bg-white my-2 mx-1"></div>
+            <div className="w-12 h-[1px] bg-black dark:bg-white my-2 mx-1"></div>
           </div>
         <Button asChild>
           <Link href="/dashboard/notes/create">Créer une note</Link>
