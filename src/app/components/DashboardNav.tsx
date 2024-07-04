@@ -15,6 +15,8 @@ export default function DashboardNav() {
     { name: "Générateur", icon: KeyRound   , path: "/dashboard/generatorPassword" },
     { name: "Settings", icon: Settings, path: "/dashboard/settings" },
     { name: "Paiement", icon: CreditCard , path: "/dashboard/payment" },
+    { name: "Products", icon: CreditCard , path: "/dashboard/products" },
+
   ];
 
 

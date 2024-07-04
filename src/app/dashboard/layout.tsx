@@ -4,11 +4,14 @@ import DashboardNav from "@/app/components/DashboardNav";
 import {getUser } from "@/lib/actionsUsers";
 import {stripe} from "@/lib/stripe"
 import { prisma } from "@/lib/db";
+import Cart from "../components/Cart";
+import { getCart } from "@/lib/actionsCart";
 
 export default async function DashboardLayout({ children }: Readonly<{
   children: React.ReactNode;
 }>) {
   const user = await getUser();
+  const cart = await getCart(user?.id as string)
 
 
 
@@ -37,8 +40,15 @@ export default async function DashboardLayout({ children }: Readonly<{
   return (
     <section className="max-w-[1200px] mx-auto md:flex items-center gap-4 h-screen w-full mt-2 p-2">
       <DashboardNav />
-      <div className="w-full h-full">
+      <div className="w-full h-full ">
+        <div className="flex items-center justify-end mb-2 mt-3 lg:mt-0 p-3 space-x-2">
+
         <ButtonSignOut />
+        <Cart user={user} cart={cart}/>
+
+        </div>
+
+        
         {children}
       </div>
     </section>

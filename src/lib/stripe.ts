@@ -22,3 +22,4 @@ export const getStripeSession = async({priceId, domainUrl, customerId}:{priceId:
   });
   return session.url as string
 }
+
